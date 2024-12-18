@@ -2,6 +2,8 @@
 
 This project demonstrates the use of Behavior-Driven Development (BDD) for testing a CI/CD pipeline integration for a retail application using pytest and the `pytest-bdd` plugin.
 
+![](https://github.com/YashzAlphaGeek/BDD-Project/blob/master/Workflow.png)
+
 ## Table of Contents
 
 - [BDD Example Project with Python](#bdd-example-project-with-python)
