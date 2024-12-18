@@ -10,6 +10,7 @@ This project demonstrates the use of Behavior-Driven Development (BDD) for testi
   - [Installation](#installation)
   - [Feature and Step Definitions](#feature-and-step-definitions)
     - [Feature File (`devops_pipeline.feature`)](#feature-file-devops_pipelinefeature)
+    - [Step Definitions (`devops_pipeline_steps.py`)](#step-definitions-devops_pipeline_stepspy)
     - [Running the Tests](#running-the-tests)
   - [Example Test Output](#example-test-output)
   - [Troubleshooting](#troubleshooting)
@@ -78,10 +79,11 @@ Feature: CI/CD Pipeline Integration
     Given Namita configures the CI/CD pipeline with version control integration
     When the code is pushed to the repository
     Then the application should be deployed successfully
+```
 
+### Step Definitions (`devops_pipeline_steps.py`)
 
-Step Definitions (devops_pipeline_steps.py)
-
+```gherkin
 from pytest_bdd import given, when, then
 
 @given('Namita configures the CI/CD pipeline with version control integration')
@@ -123,10 +125,12 @@ Application has been deployed successfully
 
 If you encounter issues, here are some common solutions:
 
+```gherkin
 ModuleNotFoundError: If you see an error like ModuleNotFoundError: No module named 'tests', make sure your Python environment is set up correctly and that you're running pytest from the root directory of the project.
 
 Step Definitions Not Found: If pytest is unable to find a step definition, ensure that your @given, @when, and @then decorators match the exact step names in your feature files. Also, confirm that your step definitions are correctly imported in the test file.
 
 Missing Dependencies: Ensure that all dependencies are installed by running pip install -r requirements.txt. If issues persist, try reinstalling your environment.
+```
 
 This project provides a simple example of how to use BDD with pytest to test the integration of a CI/CD pipeline for a retail application. By using Gherkin syntax for feature files and pytest-bdd for step definition mappings, you can efficiently write and maintain tests that focus on behavior rather than implementation details.
